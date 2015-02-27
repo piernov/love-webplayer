@@ -544,5 +544,7 @@ function MainRunAfterPreloadFinished () {
 	
 	// call MainStep() every frame, see: http://www.khronos.org/webgl/wiki/FAQ#What_is_the_recommended_way_to_implement_a_rendering_loop.3F
 	gCanvasElement = document.getElementById(gWebGLCanvasId);
+	gCanvasElement.width = window.innerWidth;
+	gCanvasElement.height = window.innerHeight;
 	MainStep(); // draw first frame, will use requestAnimFrame for further frames
 }

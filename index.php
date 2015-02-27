@@ -61,14 +61,14 @@ if(is_file("main.lua")){
   }
 ?>
   <body onload="LoveFileList('<?php echo isset($game)?"../filelist.php?game=$game":"filelist.php"; ?>'); MainOnLoad([<?php echo implode(",",$output); ?>])">
-    <h1>Love Webplayer</h1>
-      <canvas id="glcanvas" width="800" height="600">
+    <!--<h1>Love Webplayer</h1>-->
+      <canvas id="glcanvas">
         Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.  
       </canvas>
       <div id="output" style="font-family: Courier New,Courier,monospace;"></div>
 <?php } else { ?>
   <body>
-    <h1>Love Webplayer</h1>
+    <!--<h1>Love Webplayer</h1>-->
     <ul>
 <?php
 foreach(glob("*/main.lua") as $game){

@@ -19,6 +19,11 @@ function Love_Graphics_Init () {
 	mDefaultFont = new cLoveFont("initDefaultFont");
 	mFont = mDefaultFont;
 	MyCheckGLError();
+	window.onresize = function(event) {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		UtilReshapeCanvas(gl,gWebGLCanvasId);
+	}
 }
 
 function MyDefault (x,def) { return (x == undefined) ? def : x; }
